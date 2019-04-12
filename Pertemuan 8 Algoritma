@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace::std;
+double input(string text){
+    double nilai;
+cout<<"Input nilai "<<text<<" : ";cin>>nilai;
+return nilai;
+}
+
+void grade (double nilai){
+if(nilai>80 && nilai<=100) {cout<<"Kategori A";}
+else if (nilai>60 && nilai<=80) {cout<<"Kategori B";}
+else if (nilai>40 && nilai<=60) {cout<<"Kategori C";}
+else if (nilai>20 && nilai<=40) {cout<<"Kategori D";}
+else if (nilai>=0 && nilai <=20){cout<<"Kategori E";}
+else {cout<<"error";}
+}
+
+struct NA{
+double UTS,UAS,tugas,absen;
+};
+
+main(){
+    cout<<"                                Menghitung IPK"<<endl;
+    double UTS,UAS,tugas,absen,nilai;
+    UTS=input("UTS");
+    UAS=input("UAS");
+    tugas=input("Tugas");
+    absen=input("Kehadiran");
+nilai=(UTS*20/100)+(UAS*30/100)+(tugas*35/100)+(absen*15/100);
+cout<<"nilai IPK    ="<<nilai<<endl;
+grade(nilai);
+}
