@@ -1,0 +1,19 @@
+//MUHAMMAD ABY WIDIARTO 5180711006
+#include <iostream>
+#include <math.h>
+using namespace::std;
+double bil,y;
+int n;
+double pangkat(){
+ y=exp(n*log(bil));
+ return y;
+}
+
+ main(){
+int hasil;
+cout<<"                                       Program Menghitung Bilangan Berpangkat"<<endl;
+cout<<"Masukkan Nilai Bilangan                 : "; cin>>bil;
+cout<<"Masukkan nilai n (nilai pangkat) : "; cin>>n;
+cout<<"Hasil    : "<<pangkat();
+return 0;
+}
