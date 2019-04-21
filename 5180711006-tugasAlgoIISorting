@@ -1,0 +1,84 @@
+//Program Sorting 1
+#include<iostream>
+#include<conio.h>
+using namespace std;
+void Halim(int Aku[], int Kamu, int Kita){
+int Sorting;
+
+Sorting    = Aku [Kamu];
+Aku [Kamu] = Aku [Kita];
+Aku [Kita] = Sorting;
+} main(){
+
+cout<<endl;
+cout<<"  Nama            : Umdatul Qori Halim "<<endl;
+cout<<"  Kelas           : 02 TPLPB Reguler A "<<endl;
+cout<<"  Mata Kuliah     : Algoritma & Pemrograman 2"<<endl;
+cout<<endl;
+
+cout<<"  Sortinglah Data-Data Ini Dari Terbesar Ke Terkecil "<<endl<<endl;
+cout<<"  [ 4, 8, 5, 9, 6, 2, 7, 5, 9, 5 ] "<<endl<<endl;  
+cout<<"  Hasilnya Adalah : "<<endl<<endl;
+
+int Dia,Saya;
+int Angka[]={4,8,5,9,6,2,7,5,9,5};
+const int size = sizeof(Angka)/sizeof (Angka[0]);
+for(Dia = size-1;Dia >0;Dia--)
+for(Saya= 0;Saya<Dia;Saya++)
+
+if(Angka[Saya]<Angka[Saya+1])
+Halim(Angka,Saya,Saya+1);
+for(Dia=0; Dia<size; Dia++)
+cout<<"  "<<Angka[Dia];
+cout<<endl;
+getch (); }
+
+//Program Sorting 2
+#include <iostream>
+#include <conio.h>
+using namespace std;
+int main()
+{
+    int i,j,n;
+    int Arr[50];
+    int tmp;
+cout << "\n   ---------------------------------------------";
+cout << "\n   |       >> Program Pengurutan Data <<       |";
+cout << "\n   |           >> Secara Ascending <<         |";
+cout << "\n   |              >> Bubble Sort <<            |";
+cout << "\n   ---------------------------------------------\n";
+//onlygreatshare.blogspot.com
+cout << "\n   ==> Inputkan banyak data yg akan diurutkan: ";
+cin >> n;
+cout << "\n";
+for(i=1; i<=n; i++)
+{
+       cout<<"\tInputkan data ke-"<<i<<" = ";
+       cin>>Arr[i];
+}
+
+//Pengurutan secara Ascending (Bubble Sort)
+for(i=1; i<=n; i++)
+{
+       for(j=i; j<=n; j++)
+       {
+              if(Arr[i] > Arr[j])
+              {
+                     tmp = Arr[j];
+                     Arr[j] = Arr[i];
+                     Arr[i] = tmp;
+              }
+       }
+}
+cout << "\n   ---------------------------------------------\n";
+cout << "   ## Hasil Pengurutan data Secara Ascending ##\n";
+cout << "   ---------------------------------------------\n";
+cout << "\n";
+//onlygreatshare.blogspot.com
+for(i=1;i<=n;i++)
+{
+       cout<<"\tElement "<<i<<" = "<<Arr[i]<<endl;
+}
+cout << "\n Created By Achmad Kharis :)";
+getch();
+}
